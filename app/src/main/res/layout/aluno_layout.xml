@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/raText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RA"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cepText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CEP"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/logradouroText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logradouro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/complementoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complemento"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bairroText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bairro"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cidadeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cidade"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ufText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
