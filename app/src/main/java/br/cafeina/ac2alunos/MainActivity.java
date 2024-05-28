@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Aluno> alunoList = new ArrayList<>();
     private FloatingActionButton buttonAddAluno;
 
+    private static final int REQUEST_CODE_ADD_ALUNO = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +41,23 @@ public class MainActivity extends AppCompatActivity {
         alunoAdapter = new AlunoAdapter(alunoList);
         recyclerView.setAdapter(alunoAdapter);
 
-        loadData();
-
         buttonAddAluno.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AddActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, REQUEST_CODE_ADD_ALUNO);
         });
 
+        loadData();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_ADD_ALUNO && resultCode == RESULT_OK) {
+            boolean alunoAdicionado = data.getBooleanExtra("aluno_adicionado", false);
+            if (alunoAdicionado) {
+                loadData();
+            }
+        }
     }
 
     private void loadData() {
@@ -54,15 +66,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Aluno>> call, Response<List<Aluno>> response) {
                 if (response.isSuccessful() && response.body() != null) {
+                    alunoList.clear();
                     alunoList.addAll(response.body());
                     alunoAdapter.notifyDataSetChanged();
                     for (Aluno aluno : response.body()) {
                         Log.d("MainActivity", "Aluno: " + aluno.getNome());
                     }
                 } else {
-                    Log.e("MainActivity", "Response not successful");
+                    Log.e("MainActivity", "Ocorreu um erro.");
                 }
-
             }
 
             @Override

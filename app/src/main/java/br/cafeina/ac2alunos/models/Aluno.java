@@ -10,10 +10,13 @@ public class Aluno {
     private String uf;
     private int ra;
 
+    private int id;
+
     public Aluno() {
     }
 
-    public Aluno(int ra, String nome, String cep, String logradouro, String complemento, String bairro, String cidade, String uf) {
+    public Aluno(int id, int ra, String nome, String cep, String logradouro, String complemento, String bairro, String cidade, String uf) {
+        this.id = id;
         this.ra = ra;
         this.nome = nome;
         this.cep = cep;
@@ -28,8 +31,16 @@ public class Aluno {
         return ra;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setRa(int ra) {
         this.ra = ra;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {

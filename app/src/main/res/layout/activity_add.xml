@@ -26,11 +26,11 @@
         android:text="RA"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+        app:layout_constraintTop_toBottomOf="@+id/editNome" />
 
     <EditText
-        android:id="@+id/editTextRa"
-        android:layout_width="120dp"
+        android:id="@+id/editRa"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="5dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editTextNome"
+        android:id="@+id/editNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -65,35 +65,33 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:text="CEP"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/editTextRa"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+        app:layout_constraintStart_toEndOf="@+id/editRa"
+        app:layout_constraintTop_toBottomOf="@+id/editNome" />
 
     <EditText
         android:id="@+id/editCep"
-        android:layout_width="140dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextRa"
+        app:layout_constraintStart_toEndOf="@+id/editRa"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/ButtonBuscarCep"
+        android:id="@+id/buttonBuscarCep"
         android:layout_width="52dp"
         android:layout_height="46dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:clickable="true"
-        app:layout_constraintStart_toEndOf="@+id/editTextLogradouro"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/editCep"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@android:drawable/ic_search_category_default" />
 
     <TextView
@@ -105,10 +103,10 @@
         android:text="Logradouro"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRa" />
+        app:layout_constraintTop_toBottomOf="@+id/editRa" />
 
     <EditText
-        android:id="@+id/editTextLogradouro"
+        android:id="@+id/editLogradouro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -127,10 +125,10 @@
         android:text="Complemento"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLogradouro" />
+        app:layout_constraintTop_toBottomOf="@+id/editLogradouro" />
 
     <EditText
-        android:id="@+id/editTextComplemento"
+        android:id="@+id/editComplemento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -149,10 +147,10 @@
         android:text="Bairro"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextComplemento" />
+        app:layout_constraintTop_toBottomOf="@+id/editComplemento" />
 
     <EditText
-        android:id="@+id/editTextBairro"
+        android:id="@+id/editBairro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -171,10 +169,10 @@
         android:text="Cidade"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBairro" />
+        app:layout_constraintTop_toBottomOf="@+id/editBairro" />
 
     <EditText
-        android:id="@+id/editTextCidade"
+        android:id="@+id/editCidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -192,11 +190,11 @@
         android:layout_marginTop="10dp"
         android:text="UF"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/editTextCidade"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBairro" />
+        app:layout_constraintStart_toEndOf="@+id/editCidade"
+        app:layout_constraintTop_toBottomOf="@+id/editBairro" />
 
     <EditText
-        android:id="@+id/editTextUf"
+        android:id="@+id/editUf"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
